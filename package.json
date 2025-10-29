@@ -1,23 +1,27 @@
 {
-  "name": "react",
+  "name": "book-finder-app",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "A simple React Book Finder App using the Open Library API",
+  "homepage": "https://yabeshisaac.github.io/BookFinderApp",
   "main": "src/index.tsx",
+  "keywords": [],
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
     "loader-utils": "3.2.1",
-    "typescript": "5.7.2"
+    "typescript": "5.7.2",
+    "gh-pages": "^6.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
