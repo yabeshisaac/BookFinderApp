@@ -1,0 +1,183 @@
+/* 🌟 Global Styles */
+/* Sets the overall font, background gradient, and full-page layout */
+body {
+  font-family: "Poppins", sans-serif; /* Clean modern font */
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient background */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* 🧩 Main App Container */
+/* Centers everything and adds spacing around */
+.App {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* 📚 Title */
+/* Styles for main heading of the app */
+h1 {
+  font-size: 2.5rem;
+  color: #0d47a1; /* Dark blue */
+  margin-bottom: 30px;
+  letter-spacing: 1px; /* Adds space between letters */
+}
+
+/* 🔍 Search Box */
+/* Layout for input and button */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* Space between input and button */
+  margin-bottom: 25px;
+}
+
+/* Input box styling */
+.search-container input {
+  padding: 12px 16px;
+  width: 300px;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input box when active or clicked */
+.search-container input:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 8px rgba(13, 71, 161, 0.4);
+}
+
+/* Search button styling */
+.search-container button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover animation */
+.search-container button:hover {
+  background-color: #0d47a1;
+  transform: scale(1.05);
+}
+
+/* 🕐 Loading Indicator */
+/* Text shown when books are loading */
+.loading {
+  font-size: 1.1rem;
+  color: #0d47a1;
+  font-weight: 600;
+  animation: pulse 1.2s infinite;
+}
+
+/* Simple pulsing animation for loading */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* ⚠ Message Styling */
+/* Used for error or info messages */
+p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* 📖 Book List Layout */
+/* Displays multiple book cards in a flexible grid */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* 📘 Book Card */
+/* Style for each individual book */
+.book-card {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 200px;
+  padding: 18px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect to lift the card */
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Book title inside each card */
+.book-card h3 {
+  font-size: 1.1rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+
+  /* Truncate long titles with "..." */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Book author and year text */
+.book-card p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* 🔗 View Details link */
+/* Adds a nice styled link under each book */
+.view-link {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover animation for link */
+.view-link:hover,
+.view-link:focus {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* 🧠 Responsive Design */
+/* Makes the layout adapt for mobile screens */
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column; /* Stack input and button */
+  }
+
+  .search-container input {
+    width: 90%; /* Make input wider on mobile */
+  }
+
+  .book-card {
+    width: 80%; /* Make each card wider for mobile */
+  }
+}
